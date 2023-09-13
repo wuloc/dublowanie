@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="dubel123.css">
+    <meta charset="UTF-8">
+    <title>Tytul</title>
+</head>
+
+<body>
+    <div id="gora">
+<!-- Poniżej kod z lekcji dzięki któremu tworzymy kalendarz pod ktorym jest zegar -->
+        <script>
+            const months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+            const data = new Date();
+            var dzien = data.getDate();
+            var miesiac = months[data.getMonth()];
+            var rok = data.getFullYear();
+            document.write(dzien + ' ');
+            document.write(miesiac + ' ');
+            document.write(rok);
+        </script>
+        <br>
+        <h2>Uciekający Czas</h2>
+        <div id="zegar" style="width:100px; border: solid 2px rgb(ccc);">
+            <script>
+                let timerID = null;
+                let timerRunning = false;
+                function stopclock() {
+
+                    if (timerRunning)
+                        clearTimeout(timerID)
+                    timerRunning = false;
+                }
+                function startclock() {
+                    stopclock();
+                    showtime();
+                }
+                function showtime() {
+                    let data_n = new Date();
+                    let godz = data_n.getHours();
+                    let min = data_n.getMinutes();
+                    let sek = data_n.getSeconds();
+                    let czas = " " + (godz);
+                    czas += ((min < 10) ? ":0" : ":") + min;
+                    czas += ((sek < 10) ? ":0" : ":") + sek;
+                    document.getElementById("zegar").innerHTML = czas;
+                    timerID = setTimeout("showtime()", 1000);
+                    timerRunning = true;
+                }
+            </script>
+            <script>startclock();</script>
+        </div>
+
+    </div>
+
+
+
+    <div id="calosc">
+        <div id="lewo">
+<!-- Poniżej kod do hajperłączy do strony głównej i zapasowej -->
+            <h1><a href="dubel123.html">Strona główna</a></h1>
+            <br>
+            <h1><a href="dubel1232.html">Strona Druga</a></h1>
+
+        </div>
+        <div id="prawo">
+            <!-- <table border=1px>
+                <tr>
+                    <td>
+                        <script>
+                            var c = 0;
+                            while (c++ < 50) {
+                                var d = c % 2;
+                                if (d != 0) {
+                                    document.write(c + "<br>");
+
+                                }
+                            }
+                        </script>
+                    </td>
+                    <td>
+                        <script>
+                            var c = 0;
+                            while (c++ < 50) {
+                                var d = c % 2;
+                                if (d == 0) {
+                                    document.write(c + "<br>");
+
+                                }
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table> -->
+        </div>
+
+    </div>
+</body>
+
+</html>

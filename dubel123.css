@@ -1,0 +1,35 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#calosc {
+	display: flex;
+}
+
+#gora {
+	width: 100vw;
+	height: 25vh;
+	background-color: #aaa;
+	font-size: 25px;
+}
+
+#lewo {
+	width: 25vw;
+	height: 100vh;
+	background-color: #ccc;
+}
+
+#prawo {
+	display: flex;
+	align-items: flex-start;
+	width: 75vw;
+	height: 100vh;
+	background-color: #eee;
+}
+#srodekPrawo {
+	height: 40vh;
+	width: 50vw;
+	background-color: rgb(255, 0, 136);
+}
